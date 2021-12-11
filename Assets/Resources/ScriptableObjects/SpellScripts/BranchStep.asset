@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff7cfd57eb0419ab8d35deb5ef92d2d, type: 3}
+  m_Name: BranchStep
+  m_EditorClassIdentifier: 
+  _SpellID: 1
+  _SpellPrefab: {fileID: 2482871979913401244, guid: 85054f7bad43cb24ba74f020dad4d498, type: 3}
+  _SpellSprite: {fileID: 21300000, guid: 824a48daf7b55394e80e1df5048db839, type: 3}
+  _Alliances: []
+  _Type1: 4
+  _Type2: 8
+  _Type3: 0
+  _DamageMin: 0
+  _DamageMax: 0
+  _HealingMin: 0
+  _HealingMax: 0
+  _ManaCostMin: 0
+  _ManaCostMax: 0
+  _EnergyCostMin: 0
+  _EnergyCostMax: 0
+  _CooldownMin: 0
+  _CooldownMax: 0
+  _RangeMin: 50
+  _RangeMax: 200
+  _Name: 
+  _Detail: 
+  _Description: 

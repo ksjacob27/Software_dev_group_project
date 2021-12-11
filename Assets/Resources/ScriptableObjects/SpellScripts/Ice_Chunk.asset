@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff7cfd57eb0419ab8d35deb5ef92d2d, type: 3}
+  m_Name: Ice_Chunk
+  m_EditorClassIdentifier: 
+  _SpellID: 4
+  _SpellPrefab: {fileID: 1435791423062036921, guid: 7cd0ed1820eaf9d4f967d422698480af, type: 3}
+  _SpellSprite: {fileID: 21300000, guid: 2bccd332882fcd14b9e4c377e432c587, type: 3}
+  _Alliances: []
+  _Type1: 3
+  _Type2: 8
+  _Type3: 0
+  _Damage: 75
+  _DamageMin: 75
+  _DamageMax: 200
+  _Healing: 0
+  _HealingMin: 0
+  _HealingMax: 0
+  _ManaCost: 40
+  _ManaCostMin: 40
+  _ManaCostMax: 70
+  _EnergyCost: 0
+  _EnergyCostMin: 0
+  _EnergyCostMax: 0
+  _Cooldown: 10
+  _CooldownMin: 10
+  _CooldownMax: 60
+  _Range: 80
+  _RangeMin: 80
+  _RangeMax: 170
+  _Name: Ice Chunk
+  _Detail: 
+  _Description: 
