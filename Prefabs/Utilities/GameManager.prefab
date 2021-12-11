@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7012645536287765174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6988409359285075290}
+  - component: {fileID: -2691714764675303826}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 2800000, guid: 59e8714bf8fd4744bb6113efeb546702, type: 3}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6988409359285075290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7012645536287765174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2691714764675303826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7012645536287765174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0595846c0638b4ebbc989fa4dcac14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6593457756944490934, guid: 5831da5787251a24e8e07ab8e5e14e77, type: 3}
+  isLoadingScene: 0
+  playerPrefab: {fileID: 6490699006719039846, guid: 5831da5787251a24e8e07ab8e5e14e77, type: 3}
+  GameplayScene: EndOfTheRoad
+  offlineScene: IntroScene
+  LoginScene: 
+  AccountScene: 
+  LobbyScene: 
+  MainMenu: MainMenu
+  activeSceneName: 
+  playerSpawnMethod: 0
