@@ -19,20 +19,25 @@ public class MainMenuController : MonoBehaviour {
     public static readonly string QUICK_PLAY_PATH    = "EndOfTheRoad";
 
     // private static Builder        builder;
-    public         TMP_InputField serverConnection;
-
-
+    public TMP_InputField serverConnection;
+    
     public GameObject PauseMenu;
     public GameObject UserInterface;
+    public GameObject MainMenu;
+    public GameObject CreditsMenu;
+    public GameObject SettingsMenu;
+    public GameObject ScoreRecordMenu;
+    public GameObject ActiveMenu;
 
-    public Button Register_Button;
-    public Button Exit_Button;
-    public Button NewGame_Button;
-    public Button Load_Button;
-    public Button Return_Button;
-    public Button Next_Button;
+    public GameObject LoginButton;
+    public GameObject LogoutButton;
+    public GameObject UsernameInputField;
+    public GameObject PasswordInputField;
+    public GameObject PlayWithLoginButton;
+    public GameObject HighScoresButton;
+    
+    public GameObject UsernameLoggedIn;
 
-    public ScrollRect Channel_Scroll;
 
 
     // public static MainMenuController Menu { get { return _MENU_; } }
@@ -49,14 +54,42 @@ public class MainMenuController : MonoBehaviour {
     public void TogglePause()  { throw new NotImplementedException(); }
     public void ToggleResume() { throw new NotImplementedException(); }
 
-
+    
 
     private void Start() {
-        // _MENU_ = this;
-        if (DBManager.LoggedIn) {
-            throw new NotImplementedException();
+        ActiveMenu = MainMenu;
+        SettingsMenu.SetActive(false);
+        CreditsMenu.SetActive(false);
+        ScoreRecordMenu.SetActive(false);
+        LoginButton.SetActive(true);
+        LogoutButton.SetActive(false);
+        PlayWithLoginButton.SetActive(false);
+        UsernameInputField.SetActive(true);
+        PasswordInputField.SetActive(true);
+    }
+
+
+    private void Update() {
+        if (ActiveMenu == MainMenu) {
+            if (!DBManager.LoggedIn) {
+                LoginButton.SetActive(true);
+                LogoutButton.SetActive(false);
+                PlayWithLoginButton.SetActive(false);
+                UsernameLoggedIn.SetActive(false);
+                UsernameInputField.SetActive(true);
+                PasswordInputField.SetActive(true);
+            }
+            else {
+                LoginButton.SetActive(false);
+                LogoutButton.SetActive(true);
+                PlayWithLoginButton.SetActive(true);
+                UsernameLoggedIn.SetActive(true);
+                UsernameInputField.SetActive(false);
+                PasswordInputField.SetActive(false);
+            }
         }
     }
+
 
     private void OnServerInitialized() {
         throw new NotImplementedException();
@@ -75,14 +108,48 @@ public class MainMenuController : MonoBehaviour {
         //     Console.Read();
         //     return;
         // }
-
-        
-
     }
 
-
-    public void LocalPlayStart() {
+    public void TryLogin() {
         
+    }  
+    
+    public void Logout() {
+        
+    }
+    
+    public void ToggleCredits() {
+        MainMenu.SetActive(false);
+        CreditsMenu.SetActive(true);
+        ActiveMenu = CreditsMenu;
+    }
+    
+    
+    public void ToggleSettings() {
+        MainMenu.SetActive(false);
+        SettingsMenu.SetActive(true);
+        ActiveMenu = SettingsMenu;
+    }     
+    
+    
+    public void ToggleHighScores() {
+        MainMenu.SetActive(false);
+        ScoreRecordMenu.SetActive(true);
+        ActiveMenu = ScoreRecordMenu;
+    } 
+    
+    
+    public void BackToMain() {
+        if (ActiveMenu != MainMenu) {
+            ActiveMenu.SetActive(false);
+            ActiveMenu = MainMenu;
+            ActiveMenu.SetActive(true);
+        }
+    }
+
+    
+    public void QuickPlayStart() {
+
         SceneManager.LoadScene(QUICK_PLAY_PATH);
     }
 
